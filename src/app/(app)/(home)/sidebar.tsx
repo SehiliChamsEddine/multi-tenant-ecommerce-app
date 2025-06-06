@@ -1,3 +1,4 @@
+import { ScrollArea } from '@/components/ui/scroll-area';
 import {
 	Sheet,
 	SheetContent,
@@ -6,7 +7,6 @@ import {
 } from '@/components/ui/sheet';
 import { cn } from '@/lib/utils';
 
-import { ScrollArea } from '@radix-ui/react-scroll-area';
 import Link from 'next/link';
 
 interface NavItem {
@@ -35,7 +35,7 @@ const SideBar = ({ items, open, onOpenChange, path }: SideBarProb) => {
 							key={key}
 							onClick={() => onOpenChange(false)}
 							className={cn(
-								'border-transparent hover:bg-black hover:text-white  p-4  text-left text-base  font-medium',
+								' border-transparent hover:bg-black hover:text-white block w-full p-4  text-left text-base  font-medium',
 								path === item.href && 'bg-black text-white'
 							)}
 						>
